@@ -6,11 +6,12 @@
   <body>
 
     <script>
-      function update(domthis, ref, f=((i) => i)) {
-         domthis.innerHTML = f(ref);
+      function update(domthis, ref) {
+        const target = "https://"+ref;
+        domthis.innerHTML = "<iframe src=\""+target+"\">";
       }
     </script>
      
-    <div onClick="update(this,\"xmattv.com\");" > <p>Test</p></div>
+    <div onClick="update(this,'xmattv.com');" > <p>Test</p></div>
   </body>
 </html>
