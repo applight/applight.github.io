@@ -1,8 +1,13 @@
 <html>
   <head>
+    <script>
+      function update(this, ref, f=((i) => i)) {
+        return this.innerHTML = f(ref);
+      }
+    </script>
   </head>
 
   <body>
-    <div><p>Test</p></div>
+    <div style="width: 100%; height: auto; float: left; " onClick="update(this,\"https://xmattv.com\");" ><p>Test</p></div>
   </body>
 </html>
